@@ -1,7 +1,7 @@
 # Galaga2.0
 by Omar, Josh, Anuj, Indhar
 
-Week 1: Update Graphics Panel and Fix Player based on TileGraphics
+**Week 1: Update Graphics Panel and Fix Player based on TileGraphics
 
 Omar: Enemy (And help with Graphics)
 
@@ -11,6 +11,6 @@ Indhar: Graphics Panel (And Sound Research)
 
 Josh: Research (Player / Sound)
 
-Week 2: 
+**Week 2: Continue Work on Graphics Panel / Get Sound working (IMPORTANT)
 
 (Read Me instructions 1 (#) at the begining of a line followed by space for Small Heading 2(#) for large font heading. Keep Weekly Progress in Read Me)
