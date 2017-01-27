@@ -11,6 +11,6 @@ Indhar: Graphics Panel (And Sound Research) Put image aashay into the graphics p
 
 Josh: Research (Player / Sound) Helped Omar and Indhar implement image aashay into the graphics program.
 
-**Week 2: Continue Work on Graphics Panel / Get Sound working (IMPORTANT)
+**Week 2: Continue Work on Graphics Panel (specifically player. Enemies later) / Get Sound working (IMPORTANT)
 
 (Read Me instructions 1 (#) at the begining of a line followed by space for Small Heading 2(#) for large font heading. Keep Weekly Progress in Read Me)
