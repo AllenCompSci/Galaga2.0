@@ -3,7 +3,7 @@ by Omar, Josh, Anuj, Indhar
 
 **Week 1: Update Graphics Panel and Fix Player based on TileGraphics
 
-Omar: Enemy (And help with Graphics) Put image aashay into the program, researched putting images into Java graphics.
+Omar: Enemy (And help with Graphics); Put image aashay into the program (still not done, will have to revamp), researched putting images into Java graphics.
 
 Anuj: Did Research and got the pictures for Indhar to implement in Graphics, and helped him with it. Researched enemy movement.
 
