@@ -7,7 +7,7 @@ Omar: Enemy (And help with Graphics) Put image aashay into the program, research
 
 Anuj: Did Research and got the pictures for Indhar to implement in Graphics, and helped him with it. Researched enemy movement.
 
-Indhar: Graphics Panel (And Sound Research) Put image aashay into the graphics program/
+Indhar: Graphics Panel (And Sound Research) Put image aashay into the graphics program.
 
 Josh: Research (Player / Sound) Helped Omar and Indhar implement image aashay into the graphics program.
 
