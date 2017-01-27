@@ -3,13 +3,13 @@ by Omar, Josh, Anuj, Indhar
 
 **Week 1: Update Graphics Panel and Fix Player based on TileGraphics
 
-Omar: Enemy (And help with Graphics)
+Omar: Enemy (And help with Graphics) Put image aashay into the program, researched putting images into Java graphics.
 
-Anuj: Did Research and got the pictures for Indhar to implement in Graphics, and helped him with it
+Anuj: Did Research and got the pictures for Indhar to implement in Graphics, and helped him with it. Researched enemy movement.
 
-Indhar: Graphics Panel (And Sound Research)
+Indhar: Graphics Panel (And Sound Research) Put image aashay into the graphics program/
 
-Josh: Research (Player / Sound)
+Josh: Research (Player / Sound) Helped OMar and Indhar implement image aashay into the graphics program.
 
 **Week 2: Continue Work on Graphics Panel / Get Sound working (IMPORTANT)
 
