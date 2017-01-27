@@ -9,7 +9,7 @@ Anuj: Did Research and got the pictures for Indhar to implement in Graphics, and
 
 Indhar: Graphics Panel (And Sound Research) Put image aashay into the graphics program/
 
-Josh: Research (Player / Sound) Helped OMar and Indhar implement image aashay into the graphics program.
+Josh: Research (Player / Sound) Helped Omar and Indhar implement image aashay into the graphics program.
 
 **Week 2: Continue Work on Graphics Panel / Get Sound working (IMPORTANT)
 
