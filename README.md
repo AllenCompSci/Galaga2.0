@@ -13,4 +13,6 @@ Josh: Research (Player / Sound) Helped Omar and Indhar implement image aashay in
 
 **Week 2: Continue Work on Graphics Panel (specifically player. Enemies later) / Get Sound working (IMPORTANT)
 
+Indhar: 1/31 Research: http://www.edu4java.com/en/game/game7.html sound java code
+
 (Read Me instructions 1 (#) at the begining of a line followed by space for Small Heading 2(#) for large font heading. Keep Weekly Progress in Read Me)
