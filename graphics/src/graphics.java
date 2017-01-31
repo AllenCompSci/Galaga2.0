@@ -2,24 +2,27 @@
  * Created by 239803 on 1/19/2017.
  */
 import javax.imageio.ImageIO;
+import javax.sound.sampled.*;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 import java.awt.image.BufferedImage;
+import java.io.File;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+//package dap;
 
 /**
  * Created by taylor hudson on 1/5/2017.
  */
 public class graphics implements Runnable, KeyListener, WindowListener, MouseListener {
-        public final String TITLE = "Graphics Test Window";
+        public final String TITLE = "GALAGA";
         public final Dimension SIZE = new Dimension(1920, 1080);
         public JFrame frame;
         private boolean isRunning, isDone;
         private Image imgBuffer;
-        private BufferedImage stone, grass, pig, dirt;
+        private BufferedImage stone, grass, aashay, dirt, pig;
         private TexturePaint stoneOcta, grassOcta, dirty;
         private boolean change;
         @SuppressWarnings("unused")
@@ -28,6 +31,8 @@ public class graphics implements Runnable, KeyListener, WindowListener, MouseLis
         private boolean AITurn, UserTurn;
         private Rectangle myRect;
         private Point current;
+        private int aashayI;
+        private int aashayJ;
 
     public void setChange(boolean change) {
         this.change = change;
@@ -38,10 +43,11 @@ public class graphics implements Runnable, KeyListener, WindowListener, MouseLis
         try {
 
 
-            stone = ImageIO.read(this.getClass().getResource("trump.jpg"));
+            stone = ImageIO.read(this.getClass().getResource("pranay.jpg"));
+            aashay = ImageIO.read(this.getClass().getResource("aashay.png"));
             grass = ImageIO.read(this.getClass().getResource("grass.png"));
             pig = ImageIO.read(this.getClass().getResource("16.png"));
-            dirt = ImageIO.read(this.getClass().getResource("aashay.png"));
+            dirt = ImageIO.read(this.getClass().getResource("obama.jpg"));
             grassOcta = new TexturePaint(grass, new Rectangle(0, 0, 90, 60));
             stoneOcta = new TexturePaint(stone, new Rectangle(0, 0, 1920, 1080));
             dirty = new TexturePaint(dirt, new Rectangle(0, 0, 1920, 1080));
@@ -58,7 +64,7 @@ public class graphics implements Runnable, KeyListener, WindowListener, MouseLis
         loadImages();
         setChange(true);
         current = new Point(920,940);
-        myRect = new Rectangle((int)current.getX(), (int)current.getY(), 700, 100); // x,y,h,w to move just change x and y
+        myRect = new Rectangle((int)current.getX(), (int)current.getY(), 700, 200); // x,y,h,w to move just change x and y
         BROWN = new Color(139,69,19);
         frame = new JFrame();
         frame.addKeyListener(this);
@@ -86,7 +92,7 @@ public class graphics implements Runnable, KeyListener, WindowListener, MouseLis
 
 
         if(Key == KeyEvent.VK_UP){ // UP
-            if(myRect.getY()>(31)) {
+            if(aashay.getMinY()>(31)) {
                 myRect.setLocation((int) myRect.getX(), (int) myRect.getY() - 5);
             }
             else {
@@ -226,7 +232,8 @@ public class graphics implements Runnable, KeyListener, WindowListener, MouseLis
         g2d.setColor(Color.PINK);
         Stroke old = g2d.getStroke();
         g2d.setStroke(new BasicStroke(3));
-        g2d.draw(myRect);
+        g2d.drawImage(aashay,450,600,500,690, 0, 0, 650, 1033, null );
+        //g2d.draw(myRect);
         g2d.setStroke(old);
         if(isRunning)
             g2d = (Graphics2D) frame.getGraphics();
