@@ -16,5 +16,6 @@ Josh: Research (Player / Sound) Helped Omar and Indhar implement image aashay in
 Indhar: 1/31 Research: http://www.edu4java.com/en/game/game7.html sound java code
 
 Josh: 1/31 Research: http://www.windowscentral.com/arcade-game-series-galaga-review (player movement) http://gamedev.stackexchange.com/questions/82811/implementing-galaga-style-enemy-behavior-in-unity
+https://www.jetbrains.com/help/idea/2016.3/creating-and-editing-run-debug-configurations.html - problems regarding the configuration of IntelliJ programs.
 
 (Read Me instructions 1 (#) at the begining of a line followed by space for Small Heading 2(#) for large font heading. Keep Weekly Progress in Read Me)
