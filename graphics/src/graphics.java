@@ -31,8 +31,7 @@ public class graphics implements Runnable, KeyListener, WindowListener, MouseLis
         private boolean AITurn, UserTurn;
         private Rectangle myRect;
         private Point current;
-        private int aashayI;
-        private int aashayJ;
+        private int dx4, dx5, dy4, dy5;
 
     public void setChange(boolean change) {
         this.change = change;
@@ -43,11 +42,11 @@ public class graphics implements Runnable, KeyListener, WindowListener, MouseLis
         try {
 
 
-            stone = ImageIO.read(this.getClass().getResource("pranay.jpg"));
+            stone = ImageIO.read(this.getClass().getResource("space.jpg"));
             aashay = ImageIO.read(this.getClass().getResource("aashay.png"));
             grass = ImageIO.read(this.getClass().getResource("grass.png"));
             pig = ImageIO.read(this.getClass().getResource("16.png"));
-            dirt = ImageIO.read(this.getClass().getResource("obama.jpg"));
+            dirt = ImageIO.read(this.getClass().getResource("space.jpg"));
             grassOcta = new TexturePaint(grass, new Rectangle(0, 0, 90, 60));
             stoneOcta = new TexturePaint(stone, new Rectangle(0, 0, 1920, 1080));
             dirty = new TexturePaint(dirt, new Rectangle(0, 0, 1920, 1080));
@@ -61,6 +60,10 @@ public class graphics implements Runnable, KeyListener, WindowListener, MouseLis
 
     public graphics(){
 
+        dx4 = 450;
+        dy4 = 600;
+        dx5 = 650;
+        dy5 = 890;
         loadImages();
         setChange(true);
         current = new Point(920,940);
@@ -92,36 +95,33 @@ public class graphics implements Runnable, KeyListener, WindowListener, MouseLis
 
 
         if(Key == KeyEvent.VK_UP){ // UP
-            if(aashay.getMinY()>(31)) {
-                myRect.setLocation((int) myRect.getX(), (int) myRect.getY() - 5);
-            }
-            else {
-                myRect.setLocation((int) myRect.getX(), 30);//30
-            }
+
+        dy4 -= 10;
+        dy5 -= 10;
+
+
         }
         else if(Key == KeyEvent.VK_LEFT){
-            if(myRect.getX()>10) {
-                myRect.setLocation((int) myRect.getX() - 5, (int) myRect.getY());
-            }
-            else {
-                myRect.setLocation(10, (int) myRect.getY());//10
-            }
+
+        dx4 -= 10;
+        dx5 -= 10;
+
+
         }
         else if(Key == KeyEvent.VK_DOWN){ // DOWN
-            if(myRect.getY()<(int)(1080-myRect.getHeight()-10)) {
-                myRect.setLocation((int) myRect.getX(), (int) myRect.getY() + 5);
-            }
-            else {
-                myRect.setLocation((int) myRect.getX(), (int)(1080-myRect.getHeight()-10));
-            }
+
+
+         dy4 += 10;
+         dy5 += 10;
+
         }
         else if(Key == KeyEvent.VK_RIGHT){
-            if(myRect.getX()<(int)(1920-myRect.getWidth()-10)) {// of moving rectangle boundary
-                myRect.setLocation((int) myRect.getX() + 5, (int) myRect.getY());
-            }
-            else {
-                myRect.setLocation((int)(1920-myRect.getWidth()-10), (int) myRect.getY());
-            }
+
+
+        dx4 += 10;
+        dx5 += 10;
+
+
         }
     }
 
@@ -232,12 +232,13 @@ public class graphics implements Runnable, KeyListener, WindowListener, MouseLis
         g2d.setColor(Color.PINK);
         Stroke old = g2d.getStroke();
         g2d.setStroke(new BasicStroke(3));
-        g2d.drawImage(aashay,450,600,500,690, 0, 0, 650, 1033, null );
-        //g2d.draw(myRect);
+        g2d.drawImage(aashay,dx4,dy4,dx5,dy5, 0, 0, 650, 1033, null );
+
         g2d.setStroke(old);
         if(isRunning)
             g2d = (Graphics2D) frame.getGraphics();
         g2d.drawImage(imgBuffer, 0,  0, SIZE.width, SIZE.height, 0, 0, SIZE.width, SIZE.height, null);
+
         g2d.dispose();
     }
 }
