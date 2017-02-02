@@ -22,4 +22,6 @@ Anuj: 1/31: Research and helping to get the code to operate successfully, lookin
 
 Omar 1/31: PLAYER FINALLY WORKS!!!!!!!!!!! :)
 
+Josh 2/2: reserarched for an imperial .wav file and tried to get graphics program to work on the ide eclipse.
+
 (Read Me instructions 1 (#) at the begining of a line followed by space for Small Heading 2(#) for large font heading. Keep Weekly Progress in Read Me)
