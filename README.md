@@ -18,7 +18,7 @@ Indhar: 1/31 Research: http://www.edu4java.com/en/game/game7.html sound java cod
 Josh: 1/31 Research: http://www.windowscentral.com/arcade-game-series-galaga-review (player movement) http://gamedev.stackexchange.com/questions/82811/implementing-galaga-style-enemy-behavior-in-unity
 https://www.jetbrains.com/help/idea/2016.3/creating-and-editing-run-debug-configurations.html - problems regarding the configuration of IntelliJ programs.
 
-Anuj: 1/31 
+Anuj: 1/31: Research and helping to get the code to operate successfully, looking on how to get the players to move and the music
 
 Omar 1/31: PLAYER FINALLY WORKS!!!!!!!!!!! :)
 
