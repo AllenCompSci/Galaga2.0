@@ -24,6 +24,6 @@ Omar 1/31: PLAYER FINALLY WORKS!!!!!!!!!!! :)
 
 Josh 2/2: reserarched for an imperial .wav file and tried to get graphics program to work on the ide eclipse.
 
-(Read Me instructions 1 (#) at the begining of a line followed by space for Small Heading 2(#) for large font heading. Keep Weekly Progress in Read Me)
-
 Indhar 2/2: finished sound code, trying to implement sound with main graphics class or make driver class to call sound class 
+
+Omar 2/2: Enemy Class/Function template set, need to implement files and move into it
