@@ -11,6 +11,15 @@ import java.io.File;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import java.io.File;
+import java.io.IOException;
+
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
+import javax.sound.sampled.FloatControl;
+import javax.sound.sampled.LineUnavailableException;
+import javax.sound.sampled.UnsupportedAudioFileException;
 //package dap;
 
 /**
@@ -32,6 +41,10 @@ public class graphics implements Runnable, KeyListener, WindowListener, MouseLis
         private Rectangle myRect;
         private Point current;
         private int dx4, dx5, dy4, dy5;
+
+
+
+
 
     public void setChange(boolean change) {
         this.change = change;
