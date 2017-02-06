@@ -27,3 +27,6 @@ Josh 2/2: reserarched for an imperial .wav file and tried to get graphics progra
 Indhar 2/2: finished sound code, trying to implement sound with main graphics class or make driver class to call sound class 
 
 Omar 2/2: Enemy Class/Function template set, need to implement files and move into it (Side Note: Use random num gen (Math.random()) for random enemy movement
+
+Anuj 2/2: Searched for new methods and worked on powerpoint more
+
