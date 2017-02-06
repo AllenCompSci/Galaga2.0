@@ -30,3 +30,7 @@ Omar 2/2: Enemy Class/Function template set, need to implement files and move in
 
 Anuj 2/2: Searched for new methods and worked on powerpoint more
 
+INDHAR 2/6: FIXED SOUND SO IT PLAYS WITH THE REST OF THE GRAPHICS AND FIXED THE LENGTH OF THE SOUND TRACK
+OMAR: STARTED WORKING ON THE BULLET
+
+
