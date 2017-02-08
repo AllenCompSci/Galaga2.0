@@ -27,4 +27,5 @@ Anuj 2/2: Searched for new methods and worked on powerpoint more
 INDHAR 2/6: FIXED SOUND SO IT PLAYS WITH THE REST OF THE GRAPHICS AND FIXED THE LENGTH OF THE SOUND TRACK
 OMAR: STARTED WORKING ON THE BULLET
 ANUJ: Gone to 3/4 of the class to the college and career center and did some more reasearch to get the code working
+Josh: 2/6 (absent) 2/8- implemented program on the other computers that aren't Indhars and helped Omar with the enemy.
 
