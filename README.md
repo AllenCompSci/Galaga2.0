@@ -18,16 +18,26 @@ Josh: 1/31 Research: http://www.windowscentral.com/arcade-game-series-galaga-rev
 https://www.jetbrains.com/help/idea/2016.3/creating-and-editing-run-debug-configurations.html - problems regarding the configuration of IntelliJ programs.
 Anuj: 1/31: Research and helping to get the code to operate successfully, looking on how to get the players to move and the music
 Omar 1/31: PLAYER FINALLY WORKS!!!!!!!!!!! :)
-
 Josh 2/2: reserarched for an imperial .wav file and tried to get graphics program to work on the ide eclipse.
 Indhar 2/2: finished sound code, trying to implement sound with main graphics class or make driver class to call sound class 
 Omar 2/2: Enemy Class/Function template set, need to implement files and move into it (Side Note: Use random num gen (Math.random()) for random enemy movement
 Anuj 2/2: Searched for new methods and worked on powerpoint more
 
+
+**Week 3
+
+
 INDHAR 2/6: FIXED SOUND SO IT PLAYS WITH THE REST OF THE GRAPHICS AND FIXED THE LENGTH OF THE SOUND TRACK
 OMAR: STARTED WORKING ON THE BULLET
 ANUJ: Gone to 3/4 of the class to the college and career center and did some more reasearch to get the code working
-Josh: 2/6 (absent) 2/8- implemented program on the other computers that aren't Indhars and helped Omar with the enemy.
+Josh: 2/6 (absent) 
+Josh 2/8- implemented program on the other computers that aren't Indhars and helped Omar with the enemy.
 INDHAR COLLEGE AND CARRER CENTER WORKED ON PLAYER PLACEMENT AND SOUND
 OMAR: WORKED ON ENEMEY MOEVMENT
 ANUJ: HELPED WITH ENEMY MOVEMENT AND WORKED ON THE PACKET
+Omar (2/10): Enemy movement and started on curve motion
+Josh (2/10): implemented sound onto other computer (originally other comps not working: Only Indhar)
+Indhar (2/10): Worked on player movement positioning
+Anuj (2/10): Started Title Screen 
+
+
