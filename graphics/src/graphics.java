@@ -40,8 +40,8 @@ public class graphics implements Runnable, KeyListener, WindowListener, MouseLis
         private boolean AITurn, UserTurn;
         private Rectangle myRect;
         private Point current;
-        private int dx4, dx5, dy4, dy5;
-
+        private int dx4, dx5, dy4, dy5, dx2, dx3, dy2, dy9;
+        private boolean blank;
 
 
 
@@ -57,10 +57,10 @@ public class graphics implements Runnable, KeyListener, WindowListener, MouseLis
 
             stone = ImageIO.read(this.getClass().getResource("space.jpg"));
             aashay = ImageIO.read(this.getClass().getResource("aashay.png"));
-            grass = ImageIO.read(this.getClass().getResource("grass.png"));
+            grass = ImageIO.read(this.getClass().getResource("pranay.JPG"));
             pig = ImageIO.read(this.getClass().getResource("16.png"));
             dirt = ImageIO.read(this.getClass().getResource("space.jpg"));
-            grassOcta = new TexturePaint(grass, new Rectangle(0, 0, 90, 60));
+            //grassOcta = new TexturePaint(grass, new Rectangle(0, 0, 1000, 60));
             stoneOcta = new TexturePaint(stone, new Rectangle(0, 0, 1920, 1080));
             dirty = new TexturePaint(dirt, new Rectangle(0, 0, 1920, 1080));
 
@@ -73,15 +73,23 @@ public class graphics implements Runnable, KeyListener, WindowListener, MouseLis
 
     public graphics(){
 
-        dx4 = 450;
-        dy4 = 600;
-        dx5 = 650;
-        dy5 = 890;
+        // SIZE OF IMAGE
+        dx4 = 450;//450
+        dy4 = 600;//600
+        dx5 = 650;//650
+        dy5 = 890;//890
+        dx2 = 100;
+        dx3 = 200;
+        dy2 = 300;
+
+        dy9 = 500;
+
+
         loadImages();
         setChange(true);
-        current = new Point(920,940);
-        myRect = new Rectangle((int)current.getX(), (int)current.getY(), 700, 200); // x,y,h,w to move just change x and y
-        BROWN = new Color(139,69,19);
+        current = new Point(920,940); // 920,940
+        myRect = new Rectangle((int)current.getX(), (int)current.getY(), 700, 100); // x,y,h,w to move just change x and y
+        BROWN = new Color(35, 63, 139);
         frame = new JFrame();
         frame.addKeyListener(this);
         frame.addWindowListener(this);
@@ -107,6 +115,8 @@ public class graphics implements Runnable, KeyListener, WindowListener, MouseLis
         Key = e.getKeyCode();
 
 
+
+        /*
         if(Key == KeyEvent.VK_UP){ // UP
 
         dy4 -= 10;
@@ -114,25 +124,36 @@ public class graphics implements Runnable, KeyListener, WindowListener, MouseLis
 
 
         }
-        else if(Key == KeyEvent.VK_LEFT){
+        */
+        if(Key == KeyEvent.VK_LEFT){ //moving speed left
 
-        dx4 -= 10;
-        dx5 -= 10;
+        dx4 -= 50;
+        dx5 -= 50;
 
 
         }
+        else if(Key == KeyEvent.VK_SPACE){
+
+            dx4 -= 10;
+            dx5 -= 10;
+
+            createPlayer();
+
+
+        }
+        /*
         else if(Key == KeyEvent.VK_DOWN){ // DOWN
 
 
          dy4 += 10;
          dy5 += 10;
-
         }
-        else if(Key == KeyEvent.VK_RIGHT){
+        */
+        else if(Key == KeyEvent.VK_RIGHT){// moving speed right
 
 
-        dx4 += 10;
-        dx5 += 10;
+        dx4 += 50;
+        dx5 += 50;
 
 
         }
@@ -221,6 +242,20 @@ public class graphics implements Runnable, KeyListener, WindowListener, MouseLis
         while(isRunning){
 
             draw();
+            //dy2 += 10;
+
+            //dy9 += 10;
+
+            if (blank == false){
+                dx2 += 10;
+                dx3 += 10;
+            }
+            if(blank == true){
+                dx2 -= 10;
+                dx3 -= 10;
+            }
+
+           // wns(true);
 
             if(change){
                 setChange(false);
@@ -233,6 +268,23 @@ public class graphics implements Runnable, KeyListener, WindowListener, MouseLis
         }
         isDone = true;
     }
+    public boolean wns(boolean blank){
+        blank = true;
+        if (dx2 == 0){
+            blank = false;
+        }
+         if (dx3 == 1920)
+            blank = true;
+        /*if (blank == false){
+            dx2 += 10;
+            dx3 += 10;
+        }
+        if(blank == true){
+            dx2 -= 10;
+            dx3 -= 10;
+        }*/
+        return blank;
+    } //oscillaiting movement of enemy
 
     private void draw() {
 
@@ -245,7 +297,9 @@ public class graphics implements Runnable, KeyListener, WindowListener, MouseLis
         g2d.setColor(Color.PINK);
         Stroke old = g2d.getStroke();
         g2d.setStroke(new BasicStroke(3));
-        g2d.drawImage(aashay,dx4,dy4,dx5,dy5, 0, 0, 650, 1033, null );
+        //player
+        g2d.drawImage(aashay,dx4,dy4,dx5,dy5, 0, 0, 650, 1033, null );//650,1033
+        g2d.drawImage(grass,dx2, dy2, dx3, dy9,0,0,1024,1365,null);
 
         g2d.setStroke(old);
         if(isRunning)
@@ -254,6 +308,11 @@ public class graphics implements Runnable, KeyListener, WindowListener, MouseLis
 
         g2d.dispose();
     }
+
+    private void createPlayer(){
+
+    }
+
 }
 
 

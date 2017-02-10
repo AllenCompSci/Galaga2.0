@@ -1,5 +1,5 @@
 
-
+// adapted from the help of Tong
 import java.io.File;
 import java.io.IOException;
 
@@ -15,7 +15,7 @@ public class audioInputStream {
 
     public audioInputStream() throws UnsupportedAudioFileException, IOException, LineUnavailableException {
         // TODO Auto-generated method stub
-        AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new File("throneroom.wav").getAbsoluteFile());
+        AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new File("migos.wav").getAbsoluteFile());
         Clip clip = AudioSystem.getClip();
         clip.open(audioInputStream);
         FloatControl gainControl =
