@@ -21,7 +21,7 @@ Omar 2/2: Enemy Class/Function template set, need to implement files and move in
 Anuj 2/2: Searched for new methods and worked on powerpoint more
 
 
-**Week 3
+**Week 3: Player and Enemy movement / positioning (will work on for couple of weeks); Title Screen
 
 
 INDHAR 2/6: FIXED SOUND SO IT PLAYS WITH THE REST OF THE GRAPHICS AND FIXED THE LENGTH OF THE SOUND TRACK
