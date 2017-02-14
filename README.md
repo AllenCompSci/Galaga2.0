@@ -35,6 +35,15 @@ ANUJ: HELPED WITH ENEMY MOVEMENT AND WORKED ON THE PACKET
 Omar (2/10): Enemy movement and started on curve motion
 Josh (2/10): implemented sound onto other computer (originally other comps not working: Only Indhar)
 Indhar (2/10): Worked on player movement positioning
-Anuj (2/10): Started Title Screen 
+Anuj (2/10): Started Title Screen
 
+
+**Week 4: Bullet set up and sound finish; Title Screen
+
+
+Omar (2/14): Started set up of bullets ( stackoverflow.com/questions/22314559/bullet-not-shooting-correctly )
+Josh (2/14): Expieremented the coordinates for using pictures other than pranay.jpg and aashay.jpg
+Indhar (2/14): Extending Sound length
+Anuj (2/14): Title page
+NOTHING UPDATED 2/14
 
