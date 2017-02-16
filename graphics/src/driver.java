@@ -10,13 +10,13 @@ public class driver {
 
         graphics testCase = new graphics();
         (new Thread(testCase)).start();
-        audioInputStream testCase2 = new audioInputStream();
+        screentitle testCase2 = new screentitle();
+        audioInputStream testCase3 = new audioInputStream();
+
 
 
         //(new String(testCase2)).start();
 
     }
 
-    }
-
-
+}
