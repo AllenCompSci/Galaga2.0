@@ -38,7 +38,7 @@ Indhar (2/10): Worked on player movement positioning
 Anuj (2/10): Started Title Screen
 
 
-**Week 4: Bullet set up and sound finish; Title Screen
+**Week 4: Bullet set up and sound finish; Title Screen; Fixing error where the enemy doesn't stop at the edge of the screen
 
 
 Omar (2/14): Started set up of bullets ( stackoverflow.com/questions/22314559/bullet-not-shooting-correctly )
