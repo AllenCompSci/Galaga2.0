@@ -47,3 +47,4 @@ Indhar (2/14): Extending Sound length
 Anuj (2/14): Title page
 NOTHING UPDATED 2/14
 Omar (2/16): Enemy 1 back and forth straight line movement set up and working; onto Enemy 2 (zigzag movement)
+Indhar 2/16: Player postion finally in the right starting postion. Still working on sound tracks
