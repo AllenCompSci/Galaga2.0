@@ -46,4 +46,4 @@ Josh (2/14): Expieremented the coordinates for using pictures other than pranay.
 Indhar (2/14): Extending Sound length
 Anuj (2/14): Title page
 NOTHING UPDATED 2/14
-
+Omar (2/16): Enemy 1 back and forth straight line movement set up and working; onto Enemy 2 (zigzag movement)
