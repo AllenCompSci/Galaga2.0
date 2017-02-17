@@ -44,7 +44,6 @@ Anuj (2/10): Started Title Screen
 Omar (2/14): Started set up of bullets ( stackoverflow.com/questions/22314559/bullet-not-shooting-correctly )
 Josh (2/14): Expieremented the coordinates for using pictures other than pranay.jpg and aashay.jpg
 Indhar (2/14): Extending Sound length
-Anuj (2/14): Title page
-NOTHING UPDATED 2/14
+Anuj (2/14) Title page
 Omar (2/16): Enemy 1 back and forth straight line movement set up and working; onto Enemy 2 (zigzag movement)
 Indhar 2/16: Player postion finally in the right starting postion. Still working on sound tracks
