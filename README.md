@@ -47,3 +47,13 @@ Indhar (2/14): Extending Sound length
 Anuj (2/14) Title page
 Omar (2/16): Enemy 1 back and forth straight line movement set up and working; onto Enemy 2 (zigzag movement)
 Indhar 2/16: Player postion finally in the right starting postion. Still working on sound tracks
+
+
+**Week 5: Adding more enemies, organization, title slide, (maybe bullet) and additional enemy movement.
+
+Josh(2/21): Worked on implementing the zig zag movement and adding more enemies.
+Omar(2/21): Organized git hub, worked on commenting the code.
+Anuj(2/21): Worked on screen title
+Indhar(2/21): ABSENT
+
+
