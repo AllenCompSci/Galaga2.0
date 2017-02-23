@@ -56,4 +56,8 @@ Omar(2/21): Organized git hub, worked on commenting the code.
 Anuj(2/21): Worked on screen title
 Indhar(2/21): ABSENT
 
+Josh and Omar(2/23): added more enemies and set coordinates for them to move horizontally, vertically and diagonal inside of.
+Anuj(2/23): ABSENT
+Indhar(2/23): worked on editing .wav files and worked on player bullets.
+
 
