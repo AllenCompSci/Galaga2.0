@@ -60,4 +60,4 @@ Josh and Omar(2/23): added more enemies and set coordinates for them to move hor
 Anuj(2/23): ABSENT
 Indhar(2/23): worked on editing .wav files and worked on player bullets.
 
-
+**Week 6: Working on presentation and presenting.
