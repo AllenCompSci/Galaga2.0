@@ -61,3 +61,5 @@ Anuj(2/23): ABSENT
 Indhar(2/23): worked on editing .wav files and worked on player bullets.
 
 **Week 6: Working on presentation and presenting.
+**Week 7: 
+Indhar (3/22/2017): worked on bullet and health bar
