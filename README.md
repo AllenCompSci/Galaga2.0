@@ -63,3 +63,4 @@ Indhar(2/23): worked on editing .wav files and worked on player bullets.
 **Week 6: Working on presentation and presenting.
 **Week 7: 
 Indhar (3/22/2017): worked on bullet and health bar
+Omar and Josh(3/22/17)- worked on bullet creation and implementation
