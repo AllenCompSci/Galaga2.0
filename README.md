@@ -65,3 +65,8 @@ Indhar(2/23): worked on editing .wav files and worked on player bullets.
 Indhar (3/22/2017): worked on bullet and health bar
 Omar and Josh(3/22/17)- worked on bullet creation and implementation
 Anuj: Redoing Title slide
+
+Josh(3/28/17): Helped Indhar with filling in hp bar and did research https://mathbits.com/MathBits/Java/Graphics/GraphingFill.htm
+Indhar(3/28/17):
+Anuj(3/28/17):
+Omar(3/28/17):
