@@ -67,6 +67,6 @@ Omar and Josh(3/22/17)- worked on bullet creation and implementation
 Anuj: Redoing Title slide
 
 Josh(3/28/17): Helped Indhar with filling in hp bar and did research https://mathbits.com/MathBits/Java/Graphics/GraphingFill.htm
-Indhar(3/28/17):
-Anuj(3/28/17):
-Omar(3/28/17):
+Indhar(3/28/17):Worked on hp bar and filling in rectangles
+Anuj(3/28/17): Worked on title screen
+Omar(3/28/17): Worked on bullet and did research
