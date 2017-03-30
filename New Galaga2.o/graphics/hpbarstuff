@@ -1,0 +1,16 @@
+g2d.setColor(Color.green);
+        g2d.fillRect(1500,100,350,75);
+        g2d.setColor(Color.black);
+        g2d.drawRect(1500,100,350,75);
+        g2d.setColor(Color.black);
+        g2d.drawRect(1500,100,50,75);
+        g2d.setColor(Color.black);
+        g2d.drawRect(1500,100,100,75);
+        g2d.setColor(Color.black);
+        g2d.drawRect(1500,100,150,75);
+        g2d.setColor(Color.black);
+        g2d.drawRect(1500,100,200,75);
+        g2d.setColor(Color.black);
+        g2d.drawRect(1500,100,250,75);
+        g2d.setColor(Color.black);
+        g2d.drawRect(1500,100,300,75);
