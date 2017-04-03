@@ -61,7 +61,9 @@ Anuj(2/23): ABSENT
 Indhar(2/23): worked on editing .wav files and worked on player bullets.
 
 **Week 6: Working on presentation and presenting.
+
 **Week 7: 
+
 Indhar (3/22/2017): worked on bullet and health bar
 Omar and Josh(3/22/17)- worked on bullet creation and implementation
 Anuj: Redoing Title slide
@@ -70,3 +72,10 @@ Josh(3/28/17): Helped Indhar with filling in hp bar and did research https://mat
 Indhar(3/28/17):Worked on hp bar and filling in rectangles
 Anuj(3/28/17): Worked on title screen
 Omar(3/28/17): Worked on bullet and did research
+
+**Week 8: Bullet finish and start collision detection
+
+(4/3)
+Omar: Finished the bullet, start collision detect
+Josh, Indhar: HP Bar and Title Screen
+Anuj: Title Screen
