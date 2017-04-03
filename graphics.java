@@ -12,7 +12,9 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.io.File;
 import java.io.IOException;
-
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
 import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
@@ -24,14 +26,15 @@ import javax.sound.sampled.UnsupportedAudioFileException;
 /**
  * Created by taylor hudson on 1/5/2017.
  */
+
 public class graphics implements Runnable, KeyListener, WindowListener, MouseListener {
         public final String TITLE = "GALAGA";
         public final Dimension SIZE = new Dimension(1920, 1080);
         public JFrame frame;
         private boolean isRunning, isDone;
         private Image imgBuffer;
-        private BufferedImage stone, grass, aashay, dirt, pig,e;
-        private TexturePaint stoneOcta, grassOcta, dirty;
+        private BufferedImage stone, grass, aashay, dirt, pig,bullet,hp,titlescreen;
+        private TexturePaint stoneOcta, dirty;
         private boolean change;
         @SuppressWarnings("unused")
         private Color BROWN;
@@ -39,8 +42,11 @@ public class graphics implements Runnable, KeyListener, WindowListener, MouseLis
         private boolean AITurn, UserTurn;
         private Rectangle myRect;
         private Point current;
-        private int dx4, dx5, dy4, dy5, dx2, dx3, dy2, dy9, dt,dy50,dy20,dy90,dx10,dx30,dtx, dty, dx6, dx7, dy6, dy7, dtx1, dty1, dx45, dx46, dy45, dy46, dy47, dy48, dx47, dx48, dty2;;
+        private int dx4, dx5, dy4, dy5, dx2, dx3, dy2, dy9, dt,dy50,dy20,dy90,dx10,dx30,dtx, dty, dx6, dx7, dy6, dy7, dtx1, dty1, dx45, dx46, dy45, dy46, dy47, dy48, dx47, dx48, dty2;
         private boolean blank;
+        //ublic  drawRectangles;
+
+
 
 
 
@@ -59,7 +65,9 @@ public class graphics implements Runnable, KeyListener, WindowListener, MouseLis
             grass = ImageIO.read(this.getClass().getResource("kyle.jpeg")); // enemy image
             pig = ImageIO.read(this.getClass().getResource("16.png")); // I dont even know
             dirt = ImageIO.read(this.getClass().getResource("space.jpg")); // backtground image
-            e = ImageIO.read(this.getClass().getResource("pranay.jpg")); // bullet which actually isnt a bullet
+            bullet = ImageIO.read(this.getClass().getResource("pranay.jpg")); // bullet which actually isnt a bullet
+            hp=ImageIO.read(this.getClass().getResource("hp.png"));
+            titlescreen=ImageIO.read(this.getClass().getResource("titlescreen.png"));
 
 
             stoneOcta = new TexturePaint(stone, new Rectangle(0, 0, 1920, 1080));
@@ -134,6 +142,9 @@ public class graphics implements Runnable, KeyListener, WindowListener, MouseLis
         frame.setVisible(true);
         frame.setLayout(null);
         imgBuffer = frame.createImage(SIZE.width, SIZE.height);
+        //drawRectangles(Graphics g);
+       // paint(Graphics g);
+
 
     }
 
@@ -145,31 +156,80 @@ public class graphics implements Runnable, KeyListener, WindowListener, MouseLis
     @Override
     public void keyPressed(KeyEvent e) {
         int Key;
+
         Key = e.getKeyCode();
-
-
-
-
+        Graphics2D g2d = (Graphics2D) imgBuffer.getGraphics();
         if(Key == KeyEvent.VK_LEFT){ //moving speed left
 
         dx4 -= 50;
         dx5 -= 50;
-
+        dx10 -=50;
+        dx30 -=50;
         }
-        if(Key == KeyEvent.VK_SPACE){//space bar
-            dy20 -= 50;
-            dy90 -= 50;
 
-
-
-        }
         else if(Key == KeyEvent.VK_RIGHT){// moving speed right
-
 
         dx4 += 50;
         dx5 += 50;
+        dx10 +=50;
+        dx30 +=50;
+            if(Key == KeyEvent.VK_UP){
+                g2d.drawImage(titlescreen, 0, 0, 1920,1080 , 0, 0, 179, 230 , null);
 
+        }
+        }
+        if(Key == KeyEvent.VK_SPACE){ //moving speed left
 
+            //dy20 -=50;
+            //dy90-=50;
+/*
+            g2d.setPaint(dirty);
+            g2d.fillRect(0, 0, SIZE.width, SIZE.height);
+
+            g2d.setPaint(stoneOcta);
+            g2d.fillRect((int)myRect.getX(), (int)myRect.getY(), (int)myRect.getWidth(), (int)myRect.getHeight());
+
+            g2d.setColor(Color.PINK);
+            Stroke old = g2d.getStroke();
+            g2d.setStroke(new BasicStroke(3));
+            g2d.drawImage(aashay, dx4, dy4, dx5, dy5, 0, 0, 650, 1033, null);// player
+            g2d.drawImage(bullet, dx10 + 10, dy20 + 10, dx30 + 10, dy90 + 10, 0, 0, 1024, 1365, null);// bullet image
+            g2d.drawImage(grass, dx2, dy2, dx3, dy9, 0, 0, 1932, 2576, null);// enemy 1 image
+            g2d.drawImage(grass, dx6, dy6, dx7, dy7, 0, 0, 1932, 2576, null); // Enemy2 image
+            g2d.drawImage(grass, dx45, dy45, dx46, dy46, 0, 0, 1932, 2576, null); // Enemy3 image
+            g2d.drawImage(grass, dx47, dy47, dx48, dy48, 0, 0, 1932, 2576, null); //Enemy4 image
+            // g2d.drawImage(hp, 1600, 0, 1825, 250, 0, 0, 225, 225, null);
+            // g2d.drawImage(titlescreen, 0, 0, 1920,1080 , 0, 0, 179, 230 , null);
+
+            g2d.setStroke(old);
+            //hp bar
+            g2d.setColor(Color.green);
+            g2d.fillRect(1500, 100, 350, 75);
+            g2d.setColor(Color.black);
+            g2d.drawRect(1500, 100, 350, 75);
+            g2d.setColor(Color.black);
+            g2d.drawRect(1500, 100, 50, 75);
+            g2d.setColor(Color.black);
+            g2d.drawRect(1500, 100, 100, 75);
+            g2d.setColor(Color.black);
+            g2d.drawRect(1500, 100, 150, 75);
+            g2d.setColor(Color.black);
+            g2d.drawRect(1500, 100, 200, 75);
+            g2d.setColor(Color.black);
+            g2d.drawRect(1500, 100, 250, 75);
+            g2d.setColor(Color.black);
+            g2d.drawRect(1500, 100, 300, 75);
+*/
+/*
+            g2d.drawImage(titlescreen, 0, 0, 1920,1080 , 0, 0, 179, 230 , null);
+            if(isRunning)
+                g2d = (Graphics2D) frame.getGraphics();
+  */
+        }
+        if(Key == KeyEvent.VK_DOWN){ //moving speed left
+
+            dy20 +=50;
+            dy90+=50;
         }
     }
 
@@ -254,9 +314,6 @@ public class graphics implements Runnable, KeyListener, WindowListener, MouseLis
     @Override
     public void run() {
         while(isRunning){
-
-            draw();
-
             draw();
             //Enemy 1 mvmt
             if (dx3 <= 1520){
@@ -266,7 +323,6 @@ public class graphics implements Runnable, KeyListener, WindowListener, MouseLis
             if (dx3 == 1520 || dx2 == 400){
                 dt *= -1;
             }
-
             //Enemy 2 mvmt
             if (dy7 <= 350){
                 dy6 += dty;
@@ -284,7 +340,6 @@ public class graphics implements Runnable, KeyListener, WindowListener, MouseLis
             if (dx7 == 400 || dx6 == 0){
                 dtx *= -1;
             }
-
             //Enemy 3 mvmt
             if (dy46 <= 350){
                 dy45 += dty1;
@@ -302,7 +357,6 @@ public class graphics implements Runnable, KeyListener, WindowListener, MouseLis
             if (dx46 == 1920 || dx45 == 1520){
                 dtx1 *= -1;
             }
-
             //Enemy 4 mvmt
             if (dy48 <= 1080){
                 dy47 += dty2;
@@ -325,28 +379,51 @@ public class graphics implements Runnable, KeyListener, WindowListener, MouseLis
         isDone = true;
     }
 
-
-
-
     private void draw() {
 
         // TODO Auto-generated method stub
         Graphics2D g2d = (Graphics2D) imgBuffer.getGraphics();
+
         g2d.setPaint(dirty);
         g2d.fillRect(0, 0, SIZE.width, SIZE.height);
+
         g2d.setPaint(stoneOcta);
         g2d.fillRect((int)myRect.getX(), (int)myRect.getY(), (int)myRect.getWidth(), (int)myRect.getHeight());
+
         g2d.setColor(Color.PINK);
         Stroke old = g2d.getStroke();
         g2d.setStroke(new BasicStroke(3));
 
-        g2d.drawImage(aashay,dx4,dy4,dx5,dy5, 0, 0, 650, 1033, null );// player image
-        g2d.drawImage(grass,dx2, dy2, dx3, dy9,0,0,1932,2576,null);// enemy 1 image
-        g2d.drawImage(e,dx10, dy20, dx30, dy90,0,0,1024,1365,null);// bullet image
-        g2d.drawImage(grass, dx6, dy6, dx7, dy7, 0, 0, 1932, 2576, null ); // Enemy2 image
-        g2d.drawImage(grass, dx45, dy45, dx46, dy46, 0, 0, 1932, 2576, null); // Enemy3 image
-        g2d.drawImage(grass, dx47, dy47, dx48, dy48, 0, 0, 1932, 2576, null); //Enemy4 image
-        g2d.setStroke(old);
+
+            g2d.drawImage(aashay, dx4, dy4, dx5, dy5, 0, 0, 650, 1033, null);// player
+            g2d.drawImage(bullet, dx10 + 10, dy20 + 10, dx30 + 10, dy90 + 10, 0, 0, 1024, 1365, null);// bullet image
+            g2d.drawImage(grass, dx2, dy2, dx3, dy9, 0, 0, 1932, 2576, null);// enemy 1 image
+            g2d.drawImage(grass, dx6, dy6, dx7, dy7, 0, 0, 1932, 2576, null); // Enemy2 image
+            g2d.drawImage(grass, dx45, dy45, dx46, dy46, 0, 0, 1932, 2576, null); // Enemy3 image
+            g2d.drawImage(grass, dx47, dy47, dx48, dy48, 0, 0, 1932, 2576, null); //Enemy4 image
+            // g2d.drawImage(hp, 1600, 0, 1825, 250, 0, 0, 225, 225, null);
+            // g2d.drawImage(titlescreen, 0, 0, 1920,1080 , 0, 0, 179, 230 , null);
+
+            g2d.setStroke(old);
+            //hp bar
+            g2d.setColor(Color.green);
+            g2d.fillRect(1500, 100, 350, 75);
+            g2d.setColor(Color.black);
+            g2d.drawRect(1500, 100, 350, 75);
+            g2d.setColor(Color.black);
+            g2d.drawRect(1500, 100, 50, 75);
+            g2d.setColor(Color.black);
+            g2d.drawRect(1500, 100, 100, 75);
+            g2d.setColor(Color.black);
+            g2d.drawRect(1500, 100, 150, 75);
+            g2d.setColor(Color.black);
+            g2d.drawRect(1500, 100, 200, 75);
+            g2d.setColor(Color.black);
+            g2d.drawRect(1500, 100, 250, 75);
+            g2d.setColor(Color.black);
+            g2d.drawRect(1500, 100, 300, 75);
+
+        //g2d.drawImage(titlescreen, 0, 0, 1920,1080 , 0, 0, 179, 230 , null);
         if(isRunning)
             g2d = (Graphics2D) frame.getGraphics();
         g2d.drawImage(imgBuffer, 0,  0, SIZE.width, SIZE.height, 0, 0, SIZE.width, SIZE.height, null);
