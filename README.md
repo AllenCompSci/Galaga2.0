@@ -79,3 +79,8 @@ Omar(3/28/17): Worked on bullet and did research
 Omar: Finished the bullet, start collision detect
 Josh, Indhar: HP Bar and Title Screen
 Anuj: Title Screen
+
+(4/5)
+Omar: Collision detech method finished, thread = ?? (helped by Josh)
+Josh, Anuj, Indhar: Researched and worked on title screen integration
+
