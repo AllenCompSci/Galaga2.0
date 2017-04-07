@@ -86,5 +86,5 @@ Josh, Anuj, Indhar: Researched and worked on title screen integration
 
 (4/7)
 Omar: Threading methods to enable collision detection
-Josh, Indhar, Anuj: HP Bar, Title Screen, integration of HP with collision and title screen with rest of code
+Josh, Indhar https://docs.oracle.com/javase/tutorial/essential/concurrency/sleep.html, Anuj: HP Bar, Title Screen, integration of HP with collision and title screen with rest of code
 
