@@ -84,3 +84,7 @@ Anuj: Title Screen
 Omar: Collision detech method finished, thread = ?? (helped by Josh)
 Josh, Anuj, Indhar: Researched and worked on title screen integration
 
+(4/7)
+Omar: Threading methods to enable collision detection
+Josh, Indhar, Anuj: HP Bar, Title Screen, integration of HP with collision and title screen with rest of code
+
