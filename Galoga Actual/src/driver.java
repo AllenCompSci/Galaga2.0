@@ -8,6 +8,8 @@ import java.io.IOException;
 public class driver {
     public static void main(String [] args) throws UnsupportedAudioFileException, IOException, LineUnavailableException {
 
+        Thread t = new Thread();
+
         graphics testCase = new graphics();
         (new Thread(testCase)).start();
         audioInputStream testCase2 = new audioInputStream();

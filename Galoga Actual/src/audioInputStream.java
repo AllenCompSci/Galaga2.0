@@ -15,7 +15,7 @@ public class audioInputStream {
 
     public audioInputStream() throws UnsupportedAudioFileException, IOException, LineUnavailableException {
         // TODO Auto-generated method stub
-        AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new File("throneroom.wav").getAbsoluteFile());
+        AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new File("imperial.wav").getAbsoluteFile());
         Clip clip = AudioSystem.getClip();
         clip.open(audioInputStream);
         FloatControl gainControl =

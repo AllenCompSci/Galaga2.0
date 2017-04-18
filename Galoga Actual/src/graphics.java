@@ -30,10 +30,10 @@ public class graphics implements Runnable, KeyListener, WindowListener, MouseLis
         public final String TITLE = "GALAGA";
         public final Dimension SIZE = new Dimension(1920, 1080);
         public JFrame frame;
-        private boolean isRunning, isDone;
+        private boolean isRunning, isDone, isPlaying;
         private Image imgBuffer;
-        private BufferedImage stone, grass, aashay, dirt, pig,e;
-        private TexturePaint stoneOcta, dirty;
+        private BufferedImage stone, grass, aashay, dirt, pig,BlackScreen;
+        private TexturePaint stoneOcta, dirty, blacKEndScreen;
         private boolean change;
         @SuppressWarnings("unused")
         private Color BROWN;
@@ -41,12 +41,9 @@ public class graphics implements Runnable, KeyListener, WindowListener, MouseLis
         private boolean AITurn, UserTurn;
         private Rectangle myRect;
         private Point current;
-        private int dx4, dx5, dy4, dy5, dx2, dx3, dy2, dy9, dt,dy50,dy20,dy90,dx10,dx30,dtx, dty, dx6, dx7, dy6, dy7, dtx1, dty1, dx45, dx46, dy45, dy46, dy47, dy48, dx47, dx48, dty2;
+        private static int dx4, dx5, dy4, dy5, dx2, dx3, dy2, dy9, dt,dtx, dty, dx6, dx7, dy6, dy7, dtx1, dty1, dx45, dx46, dy45, dy46, dy47, dy48, dx47, dx48, dty2, dy20, dy90, dx1010;
         private int bx, by;
         private boolean blank;
-
-
-
 
     public void setChange(boolean change) {
         this.change = change;
@@ -56,17 +53,17 @@ public class graphics implements Runnable, KeyListener, WindowListener, MouseLis
 
         try {
 
-
             stone = ImageIO.read(this.getClass().getResource("space.jpg")); // another background?
-            aashay = ImageIO.read(this.getClass().getResource("aashay.png")); // player image
-            grass = ImageIO.read(this.getClass().getResource("kyle.jpeg")); // enemy image
+            aashay = ImageIO.read(this.getClass().getResource("spaceship.png")); // player image
+            grass = ImageIO.read(this.getClass().getResource("enemyaf.png")); // enemy image
             pig = ImageIO.read(this.getClass().getResource("16.png")); // I dont even know
             dirt = ImageIO.read(this.getClass().getResource("space.jpg")); // backtground image
-            e = ImageIO.read(this.getClass().getResource("pranay.jpg")); // bullet which actually isnt a bullet
+            BlackScreen = ImageIO.read(this.getClass().getResource("blacksquare.png")); // black End Screen
 
 
             stoneOcta = new TexturePaint(stone, new Rectangle(0, 0, 1920, 1080));
             dirty = new TexturePaint(dirt, new Rectangle(0, 0, 1920, 1080));
+            blacKEndScreen = new TexturePaint(BlackScreen, new Rectangle(0,0,1920, 1080));
 
         } catch (IOException ex) {
 
@@ -80,10 +77,6 @@ public class graphics implements Runnable, KeyListener, WindowListener, MouseLis
 
     public graphics(){
 
-
-
-
-
         //positioning
         dx4 = 900;//PLayer
         dy4 = 900;
@@ -94,7 +87,7 @@ public class graphics implements Runnable, KeyListener, WindowListener, MouseLis
         dx3 = 500;
         dy2 = 400;
         dt = 20;
-        dy9 = 600;
+        dy9 = 550;
 
         dtx = 10;//Enemy 2
         dty = -10;
@@ -116,17 +109,7 @@ public class graphics implements Runnable, KeyListener, WindowListener, MouseLis
         dy47 = 225;
         dy48 = 350;
 
-
-
-        //bullet start
-        //bullet = null;
-        dx10=950;
-        dx30=1000;
-        dy20=800;
-        dy90=900;
-
-
-
+        dx1010 = 1920;
 
         loadImages();
         setChange(true);
@@ -139,7 +122,8 @@ public class graphics implements Runnable, KeyListener, WindowListener, MouseLis
         frame.addMouseListener(this);
         frame.setSize(SIZE);
         frame.setTitle(TITLE);
-        isRunning = true;
+        isRunning = false;
+        isPlaying = false;
         isDone = false;
         frame.setVisible(true);
         frame.setLayout(null);
@@ -175,21 +159,36 @@ public class graphics implements Runnable, KeyListener, WindowListener, MouseLis
 
             }
             if (readyTofire == true){
-                by = dy4 - 10;
-                bx = dx4 + 18;
-                bullet = new Rectangle(bx, by, 50, 50);
+                by = dy4 - 20;
+                bx = dx4 + 50;
+                bullet = new Rectangle(bx, by, 40, 40);
                shot = true;
             }
+            enemy2detech();
+            enemy4detech();
+            enemy1detech();
+            enemy3detech();
 
 
+        }
+        else if (Key == KeyEvent.VK_W){
+            bullet.y -= 125;
+        }
+
+        else if (Key == KeyEvent.VK_A){
+            bullet.x -= 100;
+        }
+
+        else if (Key == KeyEvent.VK_D){
+            bullet.x += 100;
         }
     }
 
     public void shoot () {
         if(shot) {
-            bullet.y -= 20;
+            bullet.y -= 60;
             try{
-                Thread.sleep(25);
+                Thread.sleep(34);
             }
             catch(InterruptedException ie) {
                 ie.printStackTrace();
@@ -197,6 +196,57 @@ public class graphics implements Runnable, KeyListener, WindowListener, MouseLis
         }
     }
 
+    public void enemy1detech(){
+        for (int i = dx2; i <= dx3; i++){
+            for (int j = dy2; j <= dy9; j++){
+                if (j == bullet.y && i == bullet.x){
+                    dx2 = 0;
+                    dx3 = 0;
+                    dy2 = 0;
+                    dy9 = 0;
+                }
+            }
+        }
+    }
+
+    public void enemy2detech() {
+        for (int q = dx6; q <= dx7; q++) {
+            for (int r = dy6; r <= dy7; r++) {
+                if (r == bullet.y && q == bullet.x) {
+                    dx6 = 0;
+                    dx7 = 0;
+                    dy6 = 0;
+                    dy7 = 0;
+                }
+            }
+        }
+    }
+
+    public void enemy3detech() {
+        for (int t = dx45; t <= dx46; t++) {
+            for (int u = dy45; u <= dy46; u++) {
+                if (u == bullet.y && t == bullet.x) {
+                    dx45 = 0;
+                    dx46 = 0;
+                    dy45 = 0;
+                    dy46 = 0;
+                }
+            }
+        }
+    }
+
+    public void enemy4detech(){
+        for (int e = dx47; e <= dx48; e++){
+            for (int f = dy47; f <= dy48; f++){
+                if (f == bullet.y && e == bullet.x){
+                    dx47 = 0;
+                    dx48 = 0;
+                    dy47 = 0;
+                    dy48 = 0;
+                }
+            }
+        }
+    }
 
 
     @Override
@@ -287,81 +337,85 @@ public class graphics implements Runnable, KeyListener, WindowListener, MouseLis
 
     @Override
     public void run() {
-        while(isRunning){
+        while (isRunning) {
             draw();
             shoot();
+
+            System.out.println(dx2 + " " + dx3 + " " + dy2 + " " + dy9);
+
+
+            dx1010 -= 10;
+
             //Enemy 1 mvmt
-            if (dx3 <= 1520){
+            if (dx3 <= 1520) {
                 dx3 += dt;
                 dx2 += dt;
             }
-            if (dx3 == 1520 || dx2 == 400){
+            if (dx3 == 1520 || dx2 == 400) {
                 dt *= -1;
             }
             //Enemy 2 mvmt
-            if (dy7 <= 350){
+            if (dy7 <= 350) {
                 dy6 += dty;
                 dy7 += dty;
             }
 
-            if (dy7 == 350 || dy6 == 75){
+            if (dy7 == 350 || dy6 == 75) {
                 dty *= -1;
             }
 
-            if (dx7 <= 400){
+            if (dx7 <= 400) {
                 dx6 += dtx;
                 dx7 += dtx;
             }
-            if (dx7 == 400 || dx6 == 0){
+            if (dx7 == 400 || dx6 == 0) {
                 dtx *= -1;
             }
             //Enemy 3 mvmt
-            if (dy46 <= 350){
+            if (dy46 <= 350) {
                 dy45 += dty1;
                 dy46 += dty1;
             }
 
-            if (dy46 == 350 || dy45 == 75){
+            if (dy46 == 350 || dy45 == 75) {
                 dty1 *= -1;
             }
 
-            if (dx46 <= 1920){
+            if (dx46 <= 1920) {
                 dx45 += dtx1;
                 dx46 += dtx1;
             }
-            if (dx46 == 1920 || dx45 == 1520){
+            if (dx46 == 1920 || dx45 == 1520) {
                 dtx1 *= -1;
             }
             //Enemy 4 mvmt
-            if (dy48 <= 1080){
+            if (dy48 <= 1080) {
                 dy47 += dty2;
                 dy48 += dty2;
             }
-            if (dy48 >= 1040 || dy47 <= 30){
+            if (dy48 >= 1040 || dy47 <= 30) {
                 dty2 *= -1;
             }
 
             dy20 -= 10;
             dy90 -= 10;
 
-            if(change){
+            if (change) {
                 setChange(false);
 
             }
-            try{
-                sleep(50);}
-            catch(InterruptedException ie){
+            try {
+                sleep(50);
+            } catch (InterruptedException ie) {
                 ie.printStackTrace();
             }
-         if(bullet != null)
-             System.out.println(by + " " + bx);
-        }
+         /*if(bullet != null)
+             System.out.println(bullet.y + " " + bullet.x);
+        */}
 
-        isDone = true;
+            isDone = true;
+
     }
-
-
-
 
     private void draw() {
 
@@ -375,28 +429,40 @@ public class graphics implements Runnable, KeyListener, WindowListener, MouseLis
         Stroke old = g2d.getStroke();
         g2d.setStroke(new BasicStroke(3));
 
-        g2d.drawImage(aashay,dx4,dy4,dx5,dy5, 0, 0, 650, 1033, null );// player
-        //g2d.drawImage(e,dx10, dy20, dx30, dy90,0,0,1024,1365,null);// bullet image
-        g2d.drawImage(grass,dx2, dy2, dx3, dy9,0,0,1932,2576,null);// enemy 1 image
-        g2d.drawImage(grass, dx6, dy6, dx7, dy7, 0, 0, 1932, 2576, null ); // Enemy2 image
-        g2d.drawImage(grass, dx45, dy45, dx46, dy46, 0, 0, 1932, 2576, null); // Enemy3 image
-        g2d.drawImage(grass, dx47, dy47, dx48, dy48, 0, 0, 1932, 2576, null); //Enemy4 image
+        g2d.setColor(Color.GREEN);
+        g2d.fillRect(0,0,dx1010, 50);
+        g2d.drawImage(aashay,dx4,dy4,dx5,dy5, 0, 0, 1200, 1200, null );// player
+        g2d.drawImage(grass,dx2, dy2, dx3, dy9,0,0,211,237,null);// enemy 1 image
+        g2d.drawImage(grass, dx6, dy6, dx7, dy7, 0, 0, 211, 237, null ); // Enemy2 image
+        g2d.drawImage(grass, dx45, dy45, dx46, dy46, 0, 0, 211, 237, null); // Enemy3 image
+        g2d.drawImage(grass, dx47, dy47, dx48, dy48, 0, 0, 211, 237, null); //Enemy4 image
         g2d.setStroke(old);
-        if(isRunning)
+        if(isRunning && isPlaying)
             g2d = (Graphics2D) frame.getGraphics();
         g2d.drawImage(imgBuffer, 0,  0, SIZE.width, SIZE.height, 0, 0, SIZE.width, SIZE.height, null);
 
         if (shot){
-            g2d.setColor(Color.WHITE);
+            g2d.setColor(Color.RED);
             g2d.fillRect(bullet.x, bullet.y, bullet.width, bullet.height);
         }
 
+        if (dx1010 == 0 && isRunning && isPlaying ){
+            g2d.setPaint(blacKEndScreen);
+            g2d.setColor(Color.BLACK);
+            g2d.fillRect(0,0,1920,1080);
+            Font myFont = new Font ("Courier New", 1, 500);
+            g2d.setFont(myFont);
+            g2d.setColor(Color.RED);
+            g2d.drawString("Game", 350, 400);
+            g2d.drawString("Over!", 350, 900);
+            isRunning = false;
+
+
+        }
         g2d.dispose();
     }
 
-    private void createPlayer(){
 
-    }
 
 }
 
