@@ -95,4 +95,11 @@ Omar: Threading (WTF DOES THIS MEAN? I STILL DONT KNOW)
 Josh: HP Title Screen
 Anuj: Title Screen
 Indhar: Enemy Bulley
+(4/18)
+**MISSING TITLE SCREEN & WIN CONDITION
+Omar: Made lose condition and made a bar for time
+Josh: Helped with "Game Over!" and helpled recolorize enemies
+Anuj: Worked on enemy ship (rotation + color) 
+Indhar: worked on enemies (making more + color)
+
 
