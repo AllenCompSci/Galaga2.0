@@ -110,3 +110,10 @@ Omar: Title Screen Done and Win Condition started
 Josh: Researched issues that came up on IntelliJ and helpled Omar
 Anuj:Helped with thinking what to do next
 Indhar: Absent
+
+**Week 11 Game Finish, Comment and clean game and github
+
+(4/24)
+Omar: Game finish, comment code
+Josh/Anuj: Clean Github
+Indhar: Get better sound
