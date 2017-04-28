@@ -119,3 +119,5 @@ Josh/Anuj: Clean Github
 Indhar: Get better sound
 (4/28)
 Indhar Omar Anuj Josh work on making the game harder
+
+FIX BUG BEFORE PLAYT
