@@ -120,4 +120,9 @@ Indhar: Get better sound
 (4/28)
 Indhar Omar Anuj Josh work on making the game harder
 
+**Hell Week (also known as AP exam week)
+
+(5/2) All: Nothing
+(5/4) Omar: try to fix bug; Indhar: Calibrating Game; Anuj: Testing Calibrations from Indhar; Josh: Work with Omar
+
 FIX BUG BEFORE PLAYT
