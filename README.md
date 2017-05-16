@@ -125,5 +125,6 @@ Indhar Omar Anuj Josh work on making the game harder
 (5/2) All: Nothing
 (5/4) Omar: try to fix bug; Indhar: Calibrating Game; Anuj: Testing Calibrations from Indhar; Josh: Work with Omar
 
-FIX BUG BEFORE PLAYT
-making power point
+**Final Week: Making Presentation
+
+(5/16) All: work on presentatoin
