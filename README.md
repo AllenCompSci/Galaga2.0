@@ -1,4 +1,5 @@
 # Galaga2.0
+Galacga 8.9 would be a much better game name
 by Omar, Josh, Anuj, Indhar
 
 **Week 1: Update Graphics Panel and Fix Player based on TileGraphics
