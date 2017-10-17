@@ -128,3 +128,6 @@ Indhar Omar Anuj Josh work on making the game harder
 **Final Week: Making Presentation
 
 (5/16) All: work on presentatoin
+
+
+Work on spelling
